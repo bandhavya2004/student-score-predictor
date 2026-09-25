@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Score Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Score Predictor</h1>
+        <p class="subtitle">Predict final exam score based on study habits</p>
+
+        <form method="POST">
+            <label>Study Hours (per day)</label>
+            <input type="number" step="0.1" name="study_hours" required>
+
+            <label>Attendance (%)</label>
+            <input type="number" step="0.1" name="attendance" required>
+
+            <label>Previous Exam Score</label>
+            <input type="number" step="0.1" name="previous_score" required>
+
+            <button type="submit">Predict Score</button>
+        </form>
+
+        {% if prediction is not none %}
+            <div class="result">
+                <p>Predicted Final Score</p>
+                <p class="score">{{ prediction }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

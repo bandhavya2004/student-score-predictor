@@ -1,0 +1,6 @@
+{
+  "intercept": -12.693371036045981,
+  "study_hours_coef": 0.8685264538820394,
+  "attendance_coef": 0.34017375521417403,
+  "previous_score_coef": 0.7557081572928583
+}
